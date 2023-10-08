@@ -59,7 +59,7 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
-                <h5><i class="fa-solid fa-disease"></i> Penyakit Menular</h5>
+                <h5><i class="fa-solid fa-money-bill-wave"></i> Kemiskinan</h5>
             </div>
             <div class="card-body">
                 <div id="chart">
@@ -105,79 +105,18 @@
     <script>
         var options = {
             series: [{
-                name: "Malaria",
-                data: [8, 7, 3, 8, 43, 45]
-            },
-            {
-                name: "Gastroentritis",
-                data: [3103, 3542, 4221, 1601, 1283, 19062]
-            },
-            {
-                name: 'TBC',
-                data: [5328, 5918, 6428, 4207, 5008, 6981]
-            }
-            ],
+                name: 'Jumlah Penduduk Miskin',
+                data: [33620, 37650, 38010, 35820, 34830, 33190, 34130, 41920, 45100],
+            }],
             chart: {
                 height: 350,
-                type: 'line',
-                zoom: {
-                    enabled: false
-                },
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                width: [5, 7, 5],
-                curve: 'straight',
-                dashArray: [0, 8, 5]
+                type: 'radar',
             },
             title: {
-                text: 'Jumlah Penderita Penyakit Menular Tahun 2017 - 2022',
-                align: 'left'
-            },
-            legend: {
-                tooltipHoverFormatter: function (val, opts) {
-                    return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
-                }
-            },
-            markers: {
-                size: 0,
-                hover: {
-                    sizeOffset: 6
-                }
+                text: 'Jumlah Penduduk Miskin Tahun 2013 - 2021'
             },
             xaxis: {
-                categories: ['2017', '2018', '2019', '2020', '2021', '2022'
-                ],
-            },
-            tooltip: {
-                y: [
-                    {
-                        title: {
-                            formatter: function (val) {
-                                return val + " (jiwa)"
-                            }
-                        }
-                    },
-                    {
-                        title: {
-                            formatter: function (val) {
-                                return val + " (jiwa)"
-                            }
-                        }
-                    },
-                    {
-                        title: {
-                            formatter: function (val) {
-                                return val + " (jiwa)"
-                            }
-                        }
-                    }
-                ]
-            },
-            grid: {
-                borderColor: '#f1f1f1',
+                categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
             }
         };
 
